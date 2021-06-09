@@ -13,19 +13,19 @@ function preload()
 }
 
 function setup() {
-	createCanvas(800, 700);
+	createCanvas(innerWidth, innerHeight);
 
 
 	engine = Engine.create();
 	world = engine.world;
 
-	roof = new rooof(400, 100, 600, 20);
+	roof = new rooof(innerWidth/2, 100, innerWidth-innerWidth/5, 20);
 
-	bob1 = new bob(300, 500, 25);
-	bob2 = new bob(350, 500, 25);
-	bob3 = new bob(400, 500, 25);
-	bob4 = new bob(450, 500, 25);
-	bob5 = new bob(500, 500, 25);
+	bob1 = new bob(innerWidth/2-100, 500, 25);
+	bob2 = new bob(innerWidth/2-50, 500, 25);
+	bob3 = new bob(innerWidth/2, 500, 25);
+	bob4 = new bob(innerWidth/2+50, 500, 25);
+	bob5 = new bob(innerWidth/2+100, 500, 25);
 
 	rope1 = new rope(bob1.body, roof.body, -50*2, 0);
 	rope2 = new rope(bob2.body, roof.body, -50*1, 0);
